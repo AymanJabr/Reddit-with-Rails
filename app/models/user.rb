@@ -9,5 +9,5 @@ class User < ApplicationRecord
     validates :email, :presence => true, 
                     :length => {:minimum => 3, :maximum => 50},
                     :uniqueness => true,
-                    :format => {:with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i}
+                    :format => {:with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i, :multiline => true}
 end
